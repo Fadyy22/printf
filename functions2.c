@@ -88,3 +88,48 @@ int print_pointer(va_list type, char buff[],
 	return (write_pointer(buff, ind, length,
 		width, flag, padd, extra_c, padd_start));
 }
+
+/**
+ * print_reverse - Prints reverse string.
+ *
+ * @type: List of arguments
+ * @buff: Buffer array to handle print
+ * @flag: Calculates active flags
+ * @width: get width
+ * @precision: Precision specification
+ * @size: Size specifier
+ *
+ * Return: Numbers of chars printed
+ */
+
+int print_reverse(va_list type, char buff[],
+	int flag, int width, int precision, int size)
+{
+	char *str;
+	int i, count = 0;
+
+	UNUSED(buff);
+	UNUSED(flag);
+	UNUSED(width);
+	UNUSED(size);
+
+	str = va_arg(type, char *);
+
+	if (str == NULL)
+	{
+		UNUSED(precision);
+
+		str = ")Null(";
+	}
+	for (i = 0; str[i]; i++)
+		;
+
+	for (i = i - 1; i >= 0; i--)
+	{
+		char z = str[i];
+
+		write(1, &z, 1);
+		count++;
+	}
+	return (count);
+}

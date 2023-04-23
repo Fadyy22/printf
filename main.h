@@ -50,12 +50,10 @@ int print_pointer(va_list type, char buff[],
         int flag, int width, int precision, int size);
 
 
-int get_flags(const char *format, int *i);
-
 /** UTILS */
 int is_printable(char);
 int append_hexa_code(char, char[], int);
-
+int is_digit(char);
 
 int handle_write_char(char c, char buff[],
 	int flag, int width, int precision, int size);
@@ -66,6 +64,9 @@ int write_pointer(char buff[], int ind, int length,
 int print_hexa(va_list type, char map_to[],
 	char buff[], int flag, char flag_ch, int width, int precision, int size);
 /*
- **** Funciotns to handle other specifiers */
+ **** Funciotns to handle specifiers */
+int get_flags(const char *format, int *i);
 int get_size(const char *format, int *i);
+int get_width(const char *format, int *i, va_list list);
+
 #endif

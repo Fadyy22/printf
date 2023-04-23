@@ -75,4 +75,9 @@ int print_reverse(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 /* perision */
 int get_precision(const char *format, int *i, va_list list);
+
+/* rot13 */
+int print_rot13string(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
+
 #endif

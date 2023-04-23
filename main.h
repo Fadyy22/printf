@@ -48,7 +48,8 @@ int print_non_printable(va_list type, char buff[],
 	int flag, int width, int precision, int size);
 int print_pointer(va_list type, char buff[],
         int flag, int width, int precision, int size);
-
+int print_reverse(va_list type, char buff[],
+	int flag, int width, int precision, int size);
 
 /** UTILS */
 int is_printable(char);

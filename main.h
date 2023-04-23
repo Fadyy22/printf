@@ -65,5 +65,7 @@ int write_pointer(char buff[], int ind, int length,
 	int width, int flag, char padd, char extra_c, int padd_start);
 int print_hexa(va_list type, char map_to[],
 	char buff[], int flag, char flag_ch, int width, int precision, int size);
-
+/*
+ **** Funciotns to handle other specifiers */
+int get_size(const char *format, int *i);
 #endif

@@ -35,7 +35,8 @@ int print_hexa_upper(va_list types, char buffer[],
 /** functions2.c */
 int print_non_printable(va_list type, char buff[],
 	int flag, int width, int precision, int size);
-
+int print_pointer(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
 
 
 /** UTILS */
